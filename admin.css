@@ -1,0 +1,165 @@
+.admin-wrap{
+  max-width:800px;
+  margin:0 auto;
+  padding:20px 14px 60px;
+}
+
+.admin-card{
+  border:2px solid var(--red);
+  border-radius:6px;
+  padding:30px;
+  max-width:360px;
+  margin:60px auto;
+  text-align:center;
+  background:var(--panel);
+}
+.admin-card h2{
+  color:var(--gold);
+  margin-top:0;
+}
+.admin-card input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  background:#0a0a0a;
+  border:1px solid var(--border);
+  color:var(--text);
+  border-radius:4px;
+}
+
+.admin-btn{
+  background:var(--red);
+  color:#fff;
+  border:none;
+  padding:10px 20px;
+  border-radius:4px;
+  font-weight:700;
+  cursor:pointer;
+  width:100%;
+  margin-top:6px;
+}
+.admin-btn:hover{
+  background:var(--red-dark);
+}
+
+.admin-error{
+  color:#ff6b6b;
+  font-size:0.85em;
+  margin-top:10px;
+  min-height:1em;
+}
+.admin-msg{
+  font-size:0.85em;
+  margin-top:8px;
+  min-height:1em;
+}
+.admin-msg.success{ color:#2ecc71; }
+.admin-msg.error{ color:#ff6b6b; }
+
+.admin-tabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:20px;
+}
+.tab-btn{
+  background:var(--panel);
+  color:var(--muted);
+  border:1px solid var(--border);
+  padding:10px 16px;
+  border-radius:4px;
+  cursor:pointer;
+  font-weight:600;
+}
+.tab-btn.active{
+  background:var(--red-dark);
+  color:var(--gold);
+  border-color:var(--red);
+}
+.tab-btn.logout{
+  margin-left:auto;
+  color:#ff6b6b;
+  border-color:#ff6b6b;
+}
+
+.admin-form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:18px;
+  margin-bottom:24px;
+}
+.admin-form input, .admin-form select, .admin-form textarea{
+  background:#0a0a0a;
+  border:1px solid var(--border);
+  color:var(--text);
+  padding:10px;
+  border-radius:4px;
+  font-family:inherit;
+  font-size:0.9em;
+}
+.admin-form textarea{
+  grid-column:1/3;
+  resize:vertical;
+  min-height:80px;
+}
+.admin-form button{
+  grid-column:1/3;
+}
+.admin-form .admin-msg{
+  grid-column:1/3;
+}
+
+@media(max-width:560px){
+  .admin-form{ grid-template-columns:1fr; }
+  .admin-form textarea, .admin-form button, .admin-form .admin-msg{
+    grid-column:1/2;
+  }
+}
+
+.admin-list{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.admin-list-item{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:4px;
+  padding:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+.admin-list-item .info{
+  font-size:0.9em;
+}
+.admin-list-item .info .title{
+  font-weight:700;
+  color:var(--gold);
+}
+.admin-list-item .info .sub{
+  color:var(--muted);
+  font-size:0.85em;
+}
+.admin-list-item .actions{
+  display:flex;
+  gap:6px;
+}
+.admin-list-item button{
+  background:transparent;
+  border:1px solid var(--border);
+  color:var(--text);
+  padding:6px 10px;
+  border-radius:4px;
+  cursor:pointer;
+  font-size:0.8em;
+}
+.admin-list-item button.delete{
+  color:#ff6b6b;
+  border-color:#ff6b6b;
+}
